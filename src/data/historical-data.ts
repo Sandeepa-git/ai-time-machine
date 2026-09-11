@@ -42,6 +42,93 @@ export const historicalData: HistoricalPeriod[] = [
     color: "from-amber-900 to-yellow-700"
   },
   {
+    year: -2500,
+    era: "Indus Valley Civilization",
+    location: "Indus River Valley, South Asia",
+    description: "One of the world's earliest urban civilizations. Advanced city planning and drainage systems showcase remarkable engineering prowess.",
+    people: ["Harappa", "Mohenjo-daro", "Unknown Rulers", "Merchant Classes"],
+    events: [
+      "Urban planning and city development",
+      "Standardized weights and measures",
+      "Trade networks established",
+      "Seals and writing systems developed",
+      "Agricultural settlements flourish"
+    ],
+    technology: [
+      "Standardized bricks",
+      "Underground drainage systems",
+      "Weights and measures",
+      "Terracotta seals",
+      "Advanced irrigation"
+    ],
+    facts: [
+      "Indus Valley cities had a grid-like street layout centuries before Rome",
+      "The civilization covered over 1 million square kilometers",
+      "Their writing system remains undeciphered to this day",
+      "They had standardized weights accurate to 0.1 gram"
+    ],
+    image: "🏘️",
+    color: "from-orange-900 to-amber-700"
+  },
+  {
+    year: -1500,
+    era: "Shang Dynasty",
+    location: "Yellow River Valley, China",
+    description: "China's first confirmed dynastic civilization. Bronze metallurgy and oracle bone script reveal an advanced society.",
+    people: ["King Tang", "Lady Hao", "Oracle priests", "Bronze craftsmen"],
+    events: [
+      "Development of oracle bone script",
+      "Bronze technology advancement",
+      "Agricultural expansion",
+      "Ritual and religious ceremonies",
+      "Warfare and territorial expansion"
+    ],
+    technology: [
+      "Bronze casting",
+      "Oracle bones",
+      "Chariots",
+      "Agricultural tools",
+      "Pottery techniques"
+    ],
+    facts: [
+      "Oracle bones were used to predict the future and record events",
+      "The Shang developed one of the world's oldest writing systems",
+      "Chariots gave the Shang a military advantage",
+      "Shang bronze work remains unmatched in quality for centuries"
+    ],
+    image: "🏯",
+    color: "from-red-900 to-yellow-800"
+  },
+  {
+    year: -900,
+    era: "Vedic Age (India)",
+    location: "Indian Subcontinent",
+    description: "The age of sacred Vedas and Rig-vedic society. Foundation of Hindu philosophy and social structures established.",
+    people: ["Vedic Rishis", "Arjuna", "Indra", "Agni"],
+    events: [
+      "Composition of the four Vedas",
+      "Vedic rituals and ceremonies",
+      "Caste system foundation",
+      "Agricultural society development",
+      "Sanskrit language evolution"
+    ],
+    technology: [
+      "Vedic astronomy",
+      "Ritual knowledge",
+      "Agricultural techniques",
+      "Metallurgy",
+      "Ayurvedic medicine foundations"
+    ],
+    facts: [
+      "The Vedas are among the oldest sacred texts still in use",
+      "Vedic mathematics was remarkably advanced for its time",
+      "Sanskrit is one of the oldest Indo-European languages",
+      "The Vedic period shaped the foundation of Indian civilization"
+    ],
+    image: "🕉️",
+    color: "from-orange-900 to-red-800"
+  },
+  {
     year: -450,
     era: "Ancient Greece (Classical Period)",
     location: "Athens and Greek City-States",
@@ -69,6 +156,35 @@ export const historicalData: HistoricalPeriod[] = [
     ],
     image: "🏛️",
     color: "from-blue-900 to-cyan-700"
+  },
+  {
+    year: -221,
+    era: "Qin Dynasty (China)",
+    location: "Ancient China",
+    description: "China's first unified empire. The Great Wall is built and the Terracotta Army created to protect the emperor in the afterlife.",
+    people: ["Qin Shi Huang", "Li Si", "General Meng Tian"],
+    events: [
+      "Unification of China",
+      "Construction of the Great Wall",
+      "Creation of Terracotta Army",
+      "Standardization of weights and measures",
+      "Book burning and thought control"
+    ],
+    technology: [
+      "Great Wall fortification",
+      "Terracotta sculptures",
+      "Standardized measurements",
+      "Military innovations",
+      "Road systems"
+    ],
+    facts: [
+      "The Terracotta Army contains 8,000 life-sized warriors",
+      "Qin Shi Huang connected earlier walls to create the Great Wall",
+      "The Qin Dynasty only lasted 15 years but shaped Chinese civilization",
+      "Standardization made trade and administration efficient"
+    ],
+    image: "🏯",
+    color: "from-yellow-900 to-orange-800"
   },
   {
     year: -50,
@@ -100,6 +216,64 @@ export const historicalData: HistoricalPeriod[] = [
     color: "from-red-900 to-orange-700"
   },
   {
+    year: 632,
+    era: "Islamic Golden Age (Early)",
+    location: "Middle East & Mediterranean",
+    description: "The birth of Islamic civilization. Knowledge, astronomy, and mathematics flourish under new religious inspiration.",
+    people: ["Prophet Muhammad", "Abu Bakr", "Umar ibn al-Khattab", "Ali ibn Abi Talib"],
+    events: [
+      "Founding of Islam",
+      "Rapid Islamic expansion",
+      "Foundation of Islamic law (Sharia)",
+      "Translation movement begins",
+      "Arabic alphabet becomes standard"
+    ],
+    technology: [
+      "Advanced astronomy",
+      "Mathematical innovations",
+      "Medical knowledge",
+      "Navigation instruments",
+      "Architectural marvels"
+    ],
+    facts: [
+      "Islamic scholars preserved Greek and Roman knowledge",
+      "The Islamic world developed advanced mathematics and algorithms",
+      "Hospitals in the Islamic world were centuries ahead of Europe",
+      "Arabic numerals revolutionized mathematics worldwide"
+    ],
+    image: "🕌",
+    color: "from-green-900 to-emerald-700"
+  },
+  {
+    year: 1066,
+    era: "Norman Conquest of England",
+    location: "England and Normandy",
+    description: "William the Conqueror defeats the Anglo-Saxon King Harold. A pivotal moment that transforms English language and culture.",
+    people: ["William the Conqueror", "Harold Godwinson", "Normans", "Anglo-Saxons"],
+    events: [
+      "Battle of Hastings",
+      "Norman takeover of England",
+      "Feudal system established",
+      "Norman castles built",
+      "Language and culture merge"
+    ],
+    technology: [
+      "Medieval military tactics",
+      "Castle fortification",
+      "Norman architecture",
+      "Weapons technology",
+      "Agricultural methods"
+    ],
+    facts: [
+      "The Norman Conquest changed English language forever",
+      "Over 30% of English words have French origins from this era",
+      "The Bayeux Tapestry documents the conquest in remarkable detail",
+      "This conquest directly led to English common law"
+    ],
+    image: "⚔️",
+    color: "from-slate-900 to-gray-700"
+  },
+  {
     year: 1200,
     era: "Medieval Europe (High Middle Ages)",
     location: "European Kingdoms, England, France, Holy Roman Empire",
@@ -129,6 +303,35 @@ export const historicalData: HistoricalPeriod[] = [
     color: "from-purple-900 to-pink-700"
   },
   {
+    year: 1368,
+    era: "Ming Dynasty (Early)",
+    location: "China",
+    description: "China's restoration after Mongol rule. The Great Wall is rebuilt and the Forbidden City is constructed as a symbol of imperial power.",
+    people: ["Zhu Yuanzhang", "Yongle Emperor", "Admiral Zheng He"],
+    events: [
+      "End of Mongol rule",
+      "Construction of Forbidden City",
+      "Rebuilding of Great Wall",
+      "Maritime expeditions begin",
+      "Porcelain and silk production peak"
+    ],
+    technology: [
+      "Advanced porcelain",
+      "Wooden shipbuilding",
+      "Navigation technology",
+      "Gunpowder weapons",
+      "Architectural innovations"
+    ],
+    facts: [
+      "The Forbidden City has 999 buildings (considered the most perfect number)",
+      "Ming porcelain is still highly valued by collectors worldwide",
+      "Zheng He led massive treasure voyages across the Indian Ocean",
+      "The Ming rebuilt the Great Wall to its most recognizable form"
+    ],
+    image: "🏯",
+    color: "from-red-900 to-yellow-700"
+  },
+  {
     year: 1450,
     era: "Renaissance (Early)",
     location: "Italy, Florence, Venice, Rome",
@@ -156,6 +359,35 @@ export const historicalData: HistoricalPeriod[] = [
     ],
     image: "🎨",
     color: "from-rose-900 to-red-700"
+  },
+  {
+    year: 1543,
+    era: "Scientific Revolution (Early)",
+    location: "Europe",
+    description: "The heliocentric theory challenges the Church's geocentric worldview. Copernicus and Vesalius revolutionize science and anatomy.",
+    people: ["Copernicus", "Andreas Vesalius", "Tycho Brahe", "Giordano Bruno"],
+    events: [
+      "Copernicus publishes heliocentric theory",
+      "Vesalius advances anatomy",
+      "Telescopes invented",
+      "Challenge to religious dogma",
+      "Scientific method emerges"
+    ],
+    technology: [
+      "Improved astronomical instruments",
+      "Anatomical illustrations",
+      "Telescope development",
+      "Printing press",
+      "Mathematical advances"
+    ],
+    facts: [
+      "Copernicus's theory took decades to gain acceptance",
+      "Vesalius's anatomical illustrations were revolutionary",
+      "Giordano Bruno was burned at the stake for his beliefs",
+      "This period set the foundation for modern science"
+    ],
+    image: "🔭",
+    color: "from-indigo-900 to-purple-700"
   },
   {
     year: 1600,
@@ -216,62 +448,91 @@ export const historicalData: HistoricalPeriod[] = [
     color: "from-yellow-900 to-amber-600"
   },
   {
-    year: 1850,
-    era: "Industrial Revolution",
+    year: 1859,
+    era: "Industrial Revolution Peak",
     location: "Britain, Europe, North America",
-    description: "Machines transform society. Steam power drives factories. Cities grow rapidly. Technology reshapes human life and work forever.",
-    people: ["James Watt", "George Stephenson", "Isambard Kingdom Brunel", "Nikola Tesla", "Thomas Edison"],
+    description: "Darwin publishes Evolution while steam power transforms society. Railroads, telegraphs, and factories reshape the world.",
+    people: ["Charles Darwin", "Charles Dickens", "Florence Nightingale", "Thomas Edison"],
     events: [
-      "Steam engine powers factories",
-      "Railways transform transportation",
-      "Factories concentrate workers in cities",
-      "Mass production emerges",
-      "Child labor becomes a social issue"
+      "Darwin publishes 'On the Origin of Species'",
+      "Telegraph revolutionizes communication",
+      "Railway expansion accelerates",
+      "Factory system dominates labor",
+      "Urban industrial cities emerge"
     ],
     technology: [
-      "Steam engine",
-      "Cotton gin",
-      "Railway locomotive",
-      "Telegraph",
-      "Factory machinery"
+      "Steam power",
+      "Railway networks",
+      "Telegraph technology",
+      "Factory machinery",
+      "Steel production"
     ],
     facts: [
-      "The steam engine increased productivity by thousands of percent",
-      "Railways reduced travel time from weeks to days",
-      "Urban populations exploded as people moved from farms to factories",
-      "The Industrial Revolution created both wealth and new forms of poverty"
+      "Darwin's theory revolutionized our understanding of life",
+      "The telegraph could transmit messages across continents instantly",
+      "Railways reduced journey times from weeks to days",
+      "Industrial pollution created the first environmental crisis"
     ],
-    image: "🏭",
+    image: "🔬",
     color: "from-gray-900 to-slate-700"
   },
   {
-    year: 1920,
-    era: "Roaring Twenties & Jazz Age",
-    location: "North America & Europe",
-    description: "Post-war optimism and cultural revolution. Jazz blares from speakeasies. Art deco gleams. Technology accelerates. Everything feels new and possible.",
-    people: ["Charlie Chaplin", "F. Scott Fitzgerald", "Coco Chanel", "Duke Ellington", "Albert Einstein"],
+    year: 1912,
+    era: "Age of Aviation",
+    location: "Global",
+    description: "The Titanic sinks, airplanes take flight, and the world stands on the edge of unprecedented change and warfare.",
+    people: ["Wright Brothers", "Captain Smith", "Wilbur Wright", "Orville Wright"],
     events: [
-      "Jazz music emerges from New Orleans",
-      "Women gain voting rights",
-      "Art Deco movement transforms design",
-      "Radio broadcasts reach millions",
-      "Aviation pioneers push boundaries"
+      "Titanic sinks in Atlantic",
+      "Commercial aviation emerges",
+      "Transatlantic communication",
+      "Pre-World War I tensions",
+      "Industrial production peaks"
     ],
     technology: [
-      "Radio broadcast",
-      "Automobile production",
-      "Commercial aviation",
-      "Motion pictures with sound",
-      "Electric appliances"
+      "Powered flight",
+      "Radio communication",
+      "Ocean liners",
+      "Automotive technology",
+      "Electrical systems"
     ],
     facts: [
-      "The radio connected millions of people for the first time",
-      "Automobiles became affordable for middle-class families",
-      "Women's fashion radically changed with shorter hemlines",
-      "Silent films gave way to 'talkies' in 1927"
+      "The Titanic was considered 'unsinkable' but struck an iceberg",
+      "The Wright Brothers achieved powered flight in 1903",
+      "Commercial aviation would transform global connectivity",
+      "This era marked the peak of industrial optimism before WWI"
     ],
-    image: "🎺",
-    color: "from-fuchsia-900 to-rose-700"
+    image: "✈️",
+    color: "from-blue-900 to-cyan-700"
+  },
+  {
+    year: 1945,
+    era: "Post-World War II Era",
+    location: "Global",
+    description: "World War II ends. Nuclear age dawns. The modern world is born from the ashes. Cold War tensions begin.",
+    people: ["Harry Truman", "Winston Churchill", "Albert Einstein", "J. Robert Oppenheimer"],
+    events: [
+      "Atomic bombs dropped on Japan",
+      "End of World War II",
+      "United Nations founded",
+      "Nuclear age begins",
+      "Cold War emerges"
+    ],
+    technology: [
+      "Atomic bomb",
+      "Nuclear energy",
+      "Radar technology",
+      "Jet engines",
+      "Computer development"
+    ],
+    facts: [
+      "The atomic bomb changed warfare and geopolitics forever",
+      "Nuclear energy promised unlimited power",
+      "The United Nations was established to prevent future wars",
+      "The Cold War would dominate the next 46 years"
+    ],
+    image: "☢️",
+    color: "from-red-900 to-orange-800"
   },
   {
     year: 1969,
@@ -301,6 +562,64 @@ export const historicalData: HistoricalPeriod[] = [
     ],
     image: "🚀",
     color: "from-sky-900 to-cyan-700"
+  },
+  {
+    year: 1989,
+    era: "Digital Revolution",
+    location: "Global",
+    description: "The Berlin Wall falls. The World Wide Web is invented. Personal computers revolutionize daily life. The internet age begins.",
+    people: ["Tim Berners-Lee", "Linus Torvalds", "Steve Jobs", "Bill Gates"],
+    events: [
+      "Fall of Berlin Wall",
+      "World Wide Web invented",
+      "Personal computers widespread",
+      "End of Cold War begins",
+      "Internet revolution starts"
+    ],
+    technology: [
+      "World Wide Web",
+      "Personal computers",
+      "Mobile phones emerge",
+      "Graphical user interfaces",
+      "Digital networks"
+    ],
+    facts: [
+      "Tim Berners-Lee invented the WWW at CERN",
+      "The fall of the Berlin Wall symbolized the end of Cold War",
+      "Personal computers became affordable for everyday people",
+      "The internet would transform global communication forever"
+    ],
+    image: "💻",
+    color: "from-green-900 to-emerald-700"
+  },
+  {
+    year: 2008,
+    era: "Modern Digital Age",
+    location: "Global",
+    description: "Smartphones, social media, and cloud computing transform society. A global financial crisis reshapes economies. The digital age matures.",
+    people: ["Steve Jobs", "Mark Zuckerberg", "Sergey Brin", "Larry Page"],
+    events: [
+      "iPhone revolutionizes mobile technology",
+      "Global financial crisis begins",
+      "Social media transforms communication",
+      "Cloud computing emerges",
+      "Streaming services begin"
+    ],
+    technology: [
+      "Smartphones",
+      "Cloud computing",
+      "Social media platforms",
+      "Artificial intelligence begins",
+      "Streaming technology"
+    ],
+    facts: [
+      "The iPhone created the modern smartphone era",
+      "Social media connected billions of people worldwide",
+      "Cloud computing enables on-demand computing power",
+      "Artificial intelligence begins to influence daily life"
+    ],
+    image: "📱",
+    color: "from-violet-900 to-purple-700"
   }
 ];
 
