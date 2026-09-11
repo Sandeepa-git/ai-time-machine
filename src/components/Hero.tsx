@@ -90,7 +90,7 @@ export default function Hero({
                   type="text"
                   value={yearInput}
                   onChange={(e) => onYearChange(e.target.value)}
-                  placeholder="e.g., 1450, 1969, 3000"
+                  placeholder="e.g., 1969, 3000 BC, 1450 AD"
                   className="w-full px-6 py-4 bg-slate-900/80 border-2 border-blue-400/50 rounded-lg text-white text-center text-2xl font-bold focus:outline-none focus:border-blue-400 focus:bg-slate-900 transition-all placeholder-gray-500"
                   whileFocus={{ scale: 1.02 }}
                   disabled={isLoading}
@@ -105,6 +105,39 @@ export default function Hero({
                   </motion.p>
                 )}
               </div>
+
+              {/* Format Guide */}
+              <motion.div
+                className="bg-white/5 backdrop-blur-md border border-white/10 rounded-lg p-4"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.2 }}
+              >
+                <p className="text-gray-400 text-xs font-semibold tracking-widest mb-3">✓ ACCEPTED FORMATS:</p>
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                  <div className="text-xs text-gray-300 bg-white/5 rounded px-2 py-1 border border-blue-400/30">
+                    <span className="text-blue-400 font-bold">1969</span>
+                  </div>
+                  <div className="text-xs text-gray-300 bg-white/5 rounded px-2 py-1 border border-blue-400/30">
+                    <span className="text-blue-400 font-bold">1969 AD</span>
+                  </div>
+                  <div className="text-xs text-gray-300 bg-white/5 rounded px-2 py-1 border border-blue-400/30">
+                    <span className="text-blue-400 font-bold">3000 BC</span>
+                  </div>
+                  <div className="text-xs text-gray-300 bg-white/5 rounded px-2 py-1 border border-blue-400/30">
+                    <span className="text-blue-400 font-bold">450 BC</span>
+                  </div>
+                  <div className="text-xs text-gray-300 bg-white/5 rounded px-2 py-1 border border-blue-400/30">
+                    <span className="text-blue-400 font-bold">-3000</span>
+                  </div>
+                  <div className="text-xs text-gray-300 bg-white/5 rounded px-2 py-1 border border-blue-400/30">
+                    <span className="text-blue-400 font-bold">1450 AD</span>
+                  </div>
+                </div>
+                <p className="text-gray-500 text-xs mt-3 leading-relaxed">
+                  <strong>Range:</strong> 3000 BC to 2026 AD • <strong>BC:</strong> Before Christ • <strong>AD:</strong> Anno Domini (After Christ)
+                </p>
+              </motion.div>
 
               {/* Travel button */}
               <motion.button
