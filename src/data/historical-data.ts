@@ -14,7 +14,7 @@ export interface HistoricalPeriod {
 
 export const historicalData: HistoricalPeriod[] = [
   {
-    year: 3000,
+    year: -3000,
     era: "Ancient Egypt",
     location: "Nile Valley, Northeast Africa",
     description: "The dawn of Egyptian civilization. The Great Pyramids stand as monuments to pharaonic power and architectural genius.",
@@ -42,7 +42,7 @@ export const historicalData: HistoricalPeriod[] = [
     color: "from-amber-900 to-yellow-700"
   },
   {
-    year: 1450,
+    year: -450,
     era: "Ancient Greece (Classical Period)",
     location: "Athens and Greek City-States",
     description: "The golden age of Greek civilization. Democracy, philosophy, and art flourish in the heart of Athens.",
@@ -71,7 +71,7 @@ export const historicalData: HistoricalPeriod[] = [
     color: "from-blue-900 to-cyan-700"
   },
   {
-    year: 1850,
+    year: -50,
     era: "Ancient Rome (Imperial Period)",
     location: "Roman Empire, Europe & Mediterranean",
     description: "Rome at its height. A vast empire connected by roads, law, and engineering marvels. The Colosseum stands as a symbol of Roman power.",
@@ -312,13 +312,30 @@ export function findNearestHistoricalPeriod(year: number): HistoricalPeriod {
 }
 
 export function validateYear(year: string): { valid: boolean; error?: string } {
-  const parsedYear = parseInt(year, 10);
+  const input = year.trim().toUpperCase();
+  
+  // Handle BC/AD notation
+  let parsedYear: number;
+  
+  if (input.includes('BC') || input.includes('B.C.')) {
+    // Parse BC years
+    const numStr = input.replace(/BC|B\.C\.|AD|A\.D\./g, '').trim();
+    parsedYear = -parseInt(numStr, 10);
+  } else if (input.includes('AD') || input.includes('A.D.')) {
+    // Parse AD years
+    const numStr = input.replace(/BC|B\.C\.|AD|A\.D\./g, '').trim();
+    parsedYear = parseInt(numStr, 10);
+  } else {
+    // Parse as regular number
+    parsedYear = parseInt(input, 10);
+  }
 
   if (isNaN(parsedYear)) {
     return { valid: false, error: "Please enter a valid year" };
   }
 
-  if (parsedYear < 3000 || parsedYear > 2026) {
+  // Accept years from 3000 BC (-3000) to 2026 AD (2026)
+  if (parsedYear < -3000 || parsedYear > 2026) {
     return {
       valid: false,
       error: "Please enter a year between 3000 BC and 2026 AD"
