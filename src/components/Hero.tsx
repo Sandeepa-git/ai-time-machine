@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 interface HeroProps {
@@ -18,9 +18,12 @@ export default function Hero({
   error,
   isLoading
 }: HeroProps) {
+  const [era, setEra] = useState<'BC' | 'AD'>('AD');
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    onTimeTravel(yearInput);
+    const fullYear = era === 'BC' ? `${yearInput} BC` : yearInput;
+    onTimeTravel(fullYear);
   };
 
   return (
@@ -81,20 +84,58 @@ export default function Hero({
           {/* Input form */}
           <form onSubmit={handleSubmit} className="relative z-10 p-8 md:p-12">
             <div className="space-y-6">
-              {/* Year input */}
+              {/* Year input with BC/AD selector */}
               <div>
                 <label className="block text-sm font-semibold text-gray-300 mb-3 tracking-widest">
                   ENTER HISTORICAL YEAR
                 </label>
-                <motion.input
-                  type="text"
-                  value={yearInput}
-                  onChange={(e) => onYearChange(e.target.value)}
-                  placeholder="e.g., 1969, 3000 BC, 1450 AD"
-                  className="w-full px-6 py-4 bg-slate-900/80 border-2 border-blue-400/50 rounded-lg text-white text-center text-2xl font-bold focus:outline-none focus:border-blue-400 focus:bg-slate-900 transition-all placeholder-gray-500"
-                  whileFocus={{ scale: 1.02 }}
-                  disabled={isLoading}
-                />
+                
+                <div className="flex gap-3">
+                  {/* Year Input */}
+                  <motion.input
+                    type="text"
+                    value={yearInput}
+                    onChange={(e) => onYearChange(e.target.value)}
+                    placeholder="Enter year"
+                    className="flex-1 px-6 py-4 bg-slate-900/80 border-2 border-blue-400/50 rounded-lg text-white text-center text-2xl font-bold focus:outline-none focus:border-blue-400 focus:bg-slate-900 transition-all placeholder-gray-500"
+                    whileFocus={{ scale: 1.02 }}
+                    disabled={isLoading}
+                  />
+
+                  {/* BC/AD Selector */}
+                  <motion.div
+                    className="flex gap-2"
+                    whileHover={{ scale: 1.05 }}
+                  >
+                    <motion.button
+                      type="button"
+                      onClick={() => setEra('BC')}
+                      className={`px-6 py-4 font-bold text-lg rounded-lg transition-all tracking-wider uppercase ${
+                        era === 'BC'
+                          ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white shadow-lg shadow-orange-500/50'
+                          : 'bg-slate-900/80 text-gray-400 border-2 border-orange-400/30 hover:border-orange-400/50'
+                      }`}
+                      disabled={isLoading}
+                    >
+                      BC
+                    </motion.button>
+
+                    <motion.button
+                      type="button"
+                      onClick={() => setEra('AD')}
+                      className={`px-6 py-4 font-bold text-lg rounded-lg transition-all tracking-wider uppercase ${
+                        era === 'AD'
+                          ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white shadow-lg shadow-blue-500/50'
+                          : 'bg-slate-900/80 text-gray-400 border-2 border-blue-400/30 hover:border-blue-400/50'
+                      }`}
+                      disabled={isLoading}
+                    >
+                      AD
+                    </motion.button>
+                  </motion.div>
+                </div>
+
+                {/* Error message */}
                 {error && (
                   <motion.p
                     className="text-red-400 text-sm mt-2 font-medium"
@@ -104,39 +145,39 @@ export default function Hero({
                     ⚠ {error}
                   </motion.p>
                 )}
+
+                {/* Era info */}
+                <motion.p
+                  className="text-gray-500 text-xs mt-3"
+                  animate={{ opacity: [0.5, 1, 0.5] }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                >
+                  {era === 'BC' ? '⏰ Before Christ (Past)' : '⏰ Anno Domini (After Christ) - Present & Future'}
+                </motion.p>
               </div>
 
-              {/* Format Guide */}
+              {/* Quick Examples */}
               <motion.div
                 className="bg-white/5 backdrop-blur-md border border-white/10 rounded-lg p-4"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.2 }}
               >
-                <p className="text-gray-400 text-xs font-semibold tracking-widest mb-3">✓ ACCEPTED FORMATS:</p>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                  <div className="text-xs text-gray-300 bg-white/5 rounded px-2 py-1 border border-blue-400/30">
-                    <span className="text-blue-400 font-bold">1969</span>
+                <p className="text-gray-400 text-xs font-semibold tracking-widest mb-2">📅 QUICK EXAMPLES:</p>
+                <div className="space-y-2 text-xs text-gray-300">
+                  <div className="flex items-center gap-2">
+                    <span className="text-yellow-400">→</span>
+                    <span>Try <span className="text-blue-400 font-bold">3000 BC</span> for Ancient Egypt</span>
                   </div>
-                  <div className="text-xs text-gray-300 bg-white/5 rounded px-2 py-1 border border-blue-400/30">
-                    <span className="text-blue-400 font-bold">1969 AD</span>
+                  <div className="flex items-center gap-2">
+                    <span className="text-yellow-400">→</span>
+                    <span>Try <span className="text-blue-400 font-bold">1969 AD</span> for the Space Age</span>
                   </div>
-                  <div className="text-xs text-gray-300 bg-white/5 rounded px-2 py-1 border border-blue-400/30">
-                    <span className="text-blue-400 font-bold">3000 BC</span>
-                  </div>
-                  <div className="text-xs text-gray-300 bg-white/5 rounded px-2 py-1 border border-blue-400/30">
-                    <span className="text-blue-400 font-bold">450 BC</span>
-                  </div>
-                  <div className="text-xs text-gray-300 bg-white/5 rounded px-2 py-1 border border-blue-400/30">
-                    <span className="text-blue-400 font-bold">-3000</span>
-                  </div>
-                  <div className="text-xs text-gray-300 bg-white/5 rounded px-2 py-1 border border-blue-400/30">
-                    <span className="text-blue-400 font-bold">1450 AD</span>
+                  <div className="flex items-center gap-2">
+                    <span className="text-yellow-400">→</span>
+                    <span>Valid range: <span className="text-blue-400 font-bold">3000 BC to 2026 AD</span></span>
                   </div>
                 </div>
-                <p className="text-gray-500 text-xs mt-3 leading-relaxed">
-                  <strong>Range:</strong> 3000 BC to 2026 AD • <strong>BC:</strong> Before Christ • <strong>AD:</strong> Anno Domini (After Christ)
-                </p>
               </motion.div>
 
               {/* Travel button */}
@@ -161,7 +202,7 @@ export default function Hero({
           transition={{ delay: 0.6, duration: 0.8 }}
         >
           {[
-            { icon: '📅', title: 'Select Year', desc: 'Enter any year between 3000 BC and 2026 AD' },
+            { icon: '📅', title: 'Select Year', desc: 'Enter year number and choose BC or AD' },
             { icon: '⚡', title: 'Time Travel', desc: 'Experience cinematic time-portal transitions' },
             { icon: '🏛️', title: 'Explore', desc: 'Discover history, people, events, and technology' }
           ].map((item, idx) => (
